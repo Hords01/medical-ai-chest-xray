@@ -147,8 +147,7 @@ With limited clinical data (~2,024 images), multi-class classification showed hi
 This work was conducted at the **Department of Statistics and Computer Science, Faculty of Science, Karadeniz Technical University**.
 
 - **Thesis Advisor:** Dr. Öğr. Üyesi Tolga BERBER
-- **Research Assistant:** Arş. Gör. Beyzanur SİYAH
-- **Thesis Committee:** Dr. Öğr. Üyesi Uğur ŞEVİK, Dr. Öğr. Üyesi Halil İbrahim ŞAHİN
+- **Thesis Committee:** Dr. Öğr. Üyesi Tolga BERBER, Dr. Öğr. Üyesi Uğur ŞEVİK, Dr. Öğr. Üyesi Halil İbrahim ŞAHİN
 - **Clinical Data:** KTÜ Farabi Hospital (ethics board approved, data remains with the institution)
 
 ## Explore Each Phase
