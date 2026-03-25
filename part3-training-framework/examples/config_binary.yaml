@@ -1,0 +1,113 @@
+# ============================================================
+# Binary Classification Configuration
+# Chest X-Ray Pathology Detection (Pathology Present / Absent)
+# ============================================================
+# Usage: python train.py --config config_binary.yaml
+# ============================================================
+
+# --- Experiment Info ---
+experiment:
+  name: "pathology_detection_densenet201"
+  description: "Binary pathology classification with DenseNet201 fine-tuning"
+  output_dir: "./experiments/"
+
+# --- Data Configuration ---
+data:
+  train_data_path: "./data/pathology/train"
+  test_data_path: "./data/pathology/test"
+  val_data_path: null                    # No validation set → model selection uses train metrics
+  num_classes: 2
+  class_names: ["Patoloji Yok", "Patoloji Var"]
+  image_size: 299
+  format: "imagefolder"                  # Auto-detected: "imagefolder" or "csv"
+
+# --- Model Configuration ---
+model:
+  architecture: "densenet201"
+  pretrained: true
+  pretrained_weights: "IMAGENET1K_V1"
+  freeze_backbone: true                  # Only train final classifier
+  dropout_rate: 0.0
+  auxiliary_outputs: false               # Disable for DenseNet (relevant for GoogLeNet/Inception)
+
+# --- Training Configuration ---
+training:
+  epochs: 7
+  batch_size: 32
+  learning_rate: 0.0001
+  optimizer: "adam"
+  criterion: "cross_entropy"
+  shuffle_train: true
+  shuffle_test: false
+  num_workers: 4
+
+# --- Preprocessing / Augmentation ---
+preprocessing:
+  # Normalization
+  normalize: true
+  normalize_mean: [0.5, 0.5, 0.5]
+  normalize_std: [0.5, 0.5, 0.5]
+
+  # Augmentation toggles (fine-tuning phase)
+  random_horizontal_flip: true
+  random_vertical_flip: false
+  random_rotation: 30
+  center_crop: [299, 224]
+  random_resized_crop:
+    enabled: true
+    size: 299
+    scale: [0.8, 1.0]
+    ratio: [0.5, 1.333]
+  color_jitter: false
+  gaussian_blur: false
+  random_erasing: false
+  random_affine:
+    enabled: false
+  padding:
+    enabled: true
+    values: [60, 20, 60, 20]
+    fill: 0
+    mode: "constant"
+
+# --- Medical Imaging (disabled for standard PNG/JPEG) ---
+medical_imaging:
+  enabled: false
+  windowing:
+    enabled: false
+  clahe:
+    enabled: false
+
+# --- Checkpoint Management ---
+checkpoint:
+  strategy: "best_and_latest"            # Options: none, best_only, best_and_latest, every_n_epochs, all
+  save_only_simple_best: true
+  save_only_simple_latest: true
+  cleanup_old_best: true
+  # every_n: 10                          # Only used with "every_n_epochs" strategy
+
+# --- Model Selection ---
+model_selection:
+  strategy: "weighted"                   # Options: single_metric, weighted
+  primary_metric: "npv"                  # For single_metric strategy
+  metrics:                               # For weighted strategy
+    accuracy: 0.30
+    f1_score: 0.30
+    npv: 0.30
+    auc_roc: 0.10
+
+# --- Logging & Export ---
+logging:
+  tensorboard: true
+  tensorboard_dir: "./runs/"
+  confusion_matrix: true
+  confusion_matrix_every_epoch: false    # true = save every epoch, false = only final
+  per_class_metrics: true
+  export_formats: ["json", "csv", "xlsx"]
+  auto_readme: true                      # Generate experiment README on completion
+  epoch_snapshots: false                 # Detailed per-epoch state (verbose)
+
+# --- Reproducibility ---
+reproducibility:
+  seed: 42
+  deterministic: true
+  benchmark: false

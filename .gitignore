@@ -1,0 +1,83 @@
+# ============================================================
+# .gitignore for Medical AI Chest X-Ray Project
+# CRITICAL: Prevent accidental commit of patient data or model weights
+# ============================================================
+
+# --- Patient Data (NEVER commit) ---
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.nifti
+data/
+datasets/
+patient_data/
+clinical_data/
+ethics_data/
+
+# --- Model Weights (trained on clinical data) ---
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.tflite
+models/
+checkpoints/
+weights/
+
+# --- Experiment Outputs ---
+experiments/
+runs/
+tensorboard_logs/
+*.tfevents*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual Environment ---
+venv/
+env/
+.env/
+.venv/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Logs ---
+*.log
+logs/
