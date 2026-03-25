@@ -164,7 +164,7 @@ This work was conducted at the **Department of Statistics and Computer Science, 
 ## Author
 
 **Emirkan Beyaz**
-- BSc in Statistics and Computer Science, Karadeniz Technical University (2025)
+- BSc in Statistics and Computer Science, Karadeniz Technical University
 - Focus: Computer Vision, Medical AI, Explainable AI
 
 ## License
