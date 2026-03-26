@@ -94,8 +94,8 @@ User uploads chest X-ray
 ┌─────────────────────────────────────────┐
 │           Results Dashboard             │
 │  • Classification results               │
-│  • Sidebar: running statistics           │
-│  • Session history                       │
+│  • Sidebar: running statistics          │
+│  • Session history                      │
 └─────────────────────────────────────────┘
 ```
 
