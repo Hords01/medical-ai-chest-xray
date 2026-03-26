@@ -120,14 +120,14 @@ Rather than a single multi-class classifier, the system uses **two specialized b
 
 ```
                     ┌─────────────────────┐
-   Chest X-Ray ───▶│  Model 1: Pathology  │───▶ Pathology Present / Absent
-     Input          │  (DenseNet201 +      │
-                    │   EfficientNet +     │
-                    │   ResNet101 Ensemble)│
+   Chest X-Ray ───▶│ Model 1: Pathology  │───▶ Pathology Present / Absent
+     Input          │ (DenseNet201 +      │
+                    │  EfficientNet +     │
+                    │  ResNet101 Ensemble)│
                     └─────────────────────┘
                     ┌─────────────────────┐
-                ───▶│  Model 2: Quality    │───▶ Suitable / Not Suitable
-                    │  (Evaluability)      │     for Evaluation
+               ───▶│  Model 2: Quality   │───▶ Suitable / Not Suitable
+                    │  (Evaluability)     │     for Evaluation
                     └─────────────────────┘
 ```
 
