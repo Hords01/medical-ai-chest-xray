@@ -26,7 +26,7 @@ This is a **project documentation and methodology repository** — not a code du
 The project evolved through three distinct phases:
 
 ```
-Phase 1: Classification          Phase 2: XAI Integration       Phase 3: ML Framework
+ Phase 1: Classification          Phase 2: XAI Integration          Phase 3: ML Framework
 ┌──────────────────────────┐     ┌───────────────────────────┐     ┌───────────────────────────┐
 │ • 26 CNN architectures   │     │ • 6 CAM techniques        │     │ • YAML config system      │
 │   trained & compared     │     │ • LIME grid overlay       │     │ • 5 checkpoint strategies │
