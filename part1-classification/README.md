@@ -108,7 +108,7 @@ The app maintains session-level statistics:
 
 ## Key Takeaways
 
-1. **Depth ≠ Performance** — DenseNet121 consistently outperformed DenseNet161/169 on NPV with fewer parameters
+1. **Depth ≠ Performance** — DenseNet121 consistently outperformed DenseNet161/169 on NPV with fewer parameters (but with limited data)
 2. **NPV is the critical metric** — In clinical screening, missing a sick patient (false negative) is worse than a false alarm
 3. **Ensemble > Individual** — Soft voting improved accuracy by ~7% and NPV by ~12% over the average individual model
 4. **Binary decomposition works** — Splitting a hard 4-class problem into two focused binary problems was the key architectural decision
