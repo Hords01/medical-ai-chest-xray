@@ -27,7 +27,7 @@ The project evolved through three distinct phases:
 
 ```
 Phase 1: Classification          Phase 2: XAI Integration       Phase 3: ML Framework
-┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+┌──────────────────────────┐     ┌───────────────────────────┐     ┌───────────────────────────┐
 │ • 26 CNN architectures   │     │ • 6 CAM techniques        │     │ • YAML config system      │
 │   trained & compared     │     │ • LIME grid overlay       │     │ • 5 checkpoint strategies │
 │ • Fine-tuning pipeline   │     │ • Confidence analysis     │     │ • DICOM/CLAHE support     │
@@ -36,7 +36,7 @@ Phase 1: Classification          Phase 2: XAI Integration       Phase 3: ML Fram
 │                          │     │                           │     │                           │
 │ Result: 86.11% accuracy  │     │ Result: Interpretable     │     │ Result: Production-ready  │
 │ 87.50% NPV               │     │ clinical decision support │     │ training pipeline         │
-└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
+└──────────────────────────┘     └───────────────────────────┘     └───────────────────────────┘
 ```
 
 ## Key Results
