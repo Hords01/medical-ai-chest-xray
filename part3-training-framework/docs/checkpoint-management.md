@@ -64,7 +64,7 @@ Each saved checkpoint includes:
 ```python
 {
     'epoch': int,
-    'model_state_dict': OrderedDict,     # Model weights
+    'model_state_dict': OrderedDict,      # Model weights
     'optimizer_state_dict': OrderedDict,  # Optimizer state (for resumption)
     'score': float,                       # Composite selection score
     'metrics': dict,                      # All metrics at this epoch
