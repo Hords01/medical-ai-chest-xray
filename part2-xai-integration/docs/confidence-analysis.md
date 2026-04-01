@@ -46,10 +46,10 @@ Both models' confidence metrics were displayed side-by-side in Tab 2 (İleri Ana
 
 ```
 ┌─────────────────────────┬─────────────────────────┐
-│   Değerlendirme Modeli  │    Patoloji Modeli       │
+│   Değerlendirme Modeli  │    Patoloji Modeli      │
 ├─────────────────────────┼─────────────────────────┤
-│ Sınıf 0 Olasılığı: 8%  │ Sınıf 0 Olasılığı: 91% │
-│ Sınıf 1 Olasılığı: 92% │ Sınıf 1 Olasılığı: 9%  │
+│ Sınıf 0 Olasılığı: 8%  │ Sınıf 0 Olasılığı: 91%   │
+│ Sınıf 1 Olasılığı: 92% │ Sınıf 1 Olasılığı: 9%    │
 │ Belirsizlik: 8%         │ Belirsizlik: 9%         │
 │ Entropi: 0.3412         │ Entropi: 0.3687         │
 │                         │                         │
