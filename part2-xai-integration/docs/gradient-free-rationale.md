@@ -9,7 +9,7 @@ In our transfer learning approach, all backbone layers were frozen (ImageNet wei
 GradCAM computes the gradient of the predicted class score with respect to the feature maps of a chosen convolutional layer:
 
 ```
-α_k = (1/Z) Σ_i Σ_j (∂y_c / ∂A_k_ij)      ← gradient weights
+α_k = (1/Z) Σ_i Σ_j (∂y_c / ∂A_k_ij)         ← gradient weights
 L_GradCAM = ReLU(Σ_k α_k · A_k)              ← weighted activation sum
 ```
 
